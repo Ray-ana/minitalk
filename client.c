@@ -87,7 +87,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		ft_printf("Usage: ./client <PID> <MESSAGE>\n");
+		ft_printf("Utiliser: ./client <PID> <MESSAGE>\n");
 		return (1);
 	}
 	return (0);

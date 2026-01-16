@@ -6,7 +6,7 @@
 /*   By: rzimaeva <rzimaeva@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 13:21:10 by rzimaeva          #+#    #+#             */
-/*   Updated: 2026/01/12 18:20:34 by rzimaeva         ###   ########.fr       */
+/*   Updated: 2026/01/14 20:41:03 by rzimaeva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,14 +80,14 @@ int	main(int ac, char **av)
 		pid = ft_atoi(av[1]);
 		if (pid <= 0)
 		{
-			ft_printf("Erreur PID\n");
+			write(2, "Erreur PID\n", 11);
 			return (1);
 		}
 		send_message(pid, av[2]);
 	}
 	else
 	{
-		ft_printf("Utiliser: ./client <PID> <MESSAGE>\n");
+		write(2, "Utiliser: ./client <PID> <MESSAGE>\n", 34);
 		return (1);
 	}
 	return (0);

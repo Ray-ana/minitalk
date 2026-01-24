@@ -78,7 +78,7 @@ int	main(int ac, char **av)
 	if (ac == 3)
 	{
 		pid = ft_atoi(av[1]);
-		if (pid <= 0)
+		if (pid <= 0 || kill(pid, 0) == -1)
 		{
 			write(2, "Erreur PID\n", 11);
 			return (1);
